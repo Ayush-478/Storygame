@@ -1,0 +1,76 @@
+*{
+    font-family: 'Special Elite', monospace;
+}
+
+body{
+    background-color: #18011f;
+    color: white;
+    height: 100%;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+}
+
+.indeximg{
+    height: 70vh;
+    width: fit-content;
+    float: right;
+    z-index: -1;
+    position: relative;
+    top: -2rem;
+    left: 2rem;
+}
+
+img{
+    height: 100%;
+}
+
+.left{
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    margin-left: 2.5rem;
+    margin-top: 7.5%;
+}
+
+p{
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: 0.15rem;
+    margin-bottom: 0.7rem;
+}
+
+.text35{
+    margin-bottom: 4rem;
+}
+
+p{
+    width: 100%;
+    border-right: 5px transparent solid;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.text1{
+    animation: 
+    cursor .8s infinite,
+    typing 2.5s steps(25);
+}
+
+@keyframes cursor{
+    33%{
+        border-color: white;
+    }
+}
+
+@keyframes typing{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 100%;
+    }
+}
