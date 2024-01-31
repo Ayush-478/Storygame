@@ -4,7 +4,7 @@
 
 body{
     background-color: #18011f;
-    color: white;
+    color: #FFFADE;
     height: 100%;
     width: 100vw;
     margin: 0;
@@ -28,6 +28,7 @@ img{
 .left{
     display: flex;
     width: fit-content;
+    flex-grow: 0;
     flex-direction: column;
     margin-left: 2.5rem;
     margin-top: 7.5%;
@@ -35,34 +36,104 @@ img{
 
 p{
     display: inline-block;
-    width: 100%;
+    width:0%;
     margin: 0;
+    border-right: 4px transparent solid;
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 0.15rem;
     margin-bottom: 0.7rem;
-}
-
-.text35{
-    margin-bottom: 4rem;
-}
-
-p{
-    width: 100%;
-    border-right: 5px transparent solid;
     white-space: nowrap;
     overflow: hidden;
 }
 
 .text1{
     animation: 
-    cursor .8s infinite,
-    typing 2.5s steps(25);
+    cursor 0.6s step-end infinite,
+    typing 2.5s steps(25) forwards,
+    disappear 2.5s step-end forwards;
+}
+
+.text2{
+    animation: 
+    cursor .8s 2.5s infinite,
+    typing 2.5s 2.5s steps(25) forwards,
+    disappear 2.5s 2.5s step-end forwards;
+}
+
+.text25{
+    animation: 
+    cursor .8s 5s infinite,
+    typing 2.5s 5s steps(25) forwards,
+    disappear 2.5s 5s step-end forwards;
+}
+
+.text3{
+    animation: 
+    cursor .8s 7.5s infinite,
+    typing 2.5s 7.5s steps(25) forwards,
+    disappear 2.5s 7.5s step-end forwards;
+}
+
+.text35{
+    margin-bottom: 4rem;
+    animation: 
+    cursor .8s 10s infinite,
+    typing_short 1s 10s steps(5) forwards,
+    disappear 1s 10s step-end forwards;
+}
+
+.text4{
+    animation: 
+    cursor .8s 11s infinite,
+    typing 2.5s 11s steps(25) forwards,
+    disappear 2.5s 11s step-end forwards;
+}
+
+.text45{
+    animation: 
+    cursor .8s 13.5s infinite,
+    typing 1.5s 13.5s steps(15) forwards,
+    disappear 1.5s 13.5s step-end forwards;
+}
+
+.text5{
+    animation: 
+    cursor .8s 15s infinite,
+    typing 2.5s 15s steps(25) forwards,
+    disappear 2.5s 15s step-end forwards;
+}
+
+button{
+    margin-top: 4rem;
+    height: 2.5rem;
+    width: 80%;
+    margin-left: 3rem;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border: none;
+    background-color: #1a0202f6;
+    box-shadow: 2px 2px 5px black;
+    color: white;
+    cursor: pointer;
+    animation:
+    fadein 1s 17s forwards;
+    opacity: 0;
+}
+
+@keyframes fadein {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
 }
 
 @keyframes cursor{
-    33%{
-        border-color: white;
+    50%{
+        border-right:4px white solid;
     }
 }
 
@@ -72,5 +143,20 @@ p{
     }
     100%{
         width: 100%;
+    }
+}
+
+@keyframes disappear{
+    100%{
+        border-right: none;
+    }
+}
+
+@keyframes typing_short{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 35%;
     }
 }
